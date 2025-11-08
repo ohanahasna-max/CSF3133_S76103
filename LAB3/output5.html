@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form oninput="z.value=parseInt(x.value) +
+        parseInt(y.value)">
+        <!--min= smallest value on the slider-->
+        <!--max= largest value on the slider-->
+        <!--step= increase value on the slider-->
+        <!--value= default value(default) on the slider-->
+        <input id="x" type="range" min="0" max="10" step="1" value="0"> 0
+        <br> +
+        <input id="y" type="number" value="10">
+        <br>=
+        <output name="z" for="x y"></output>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Contact and Calculator</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f2f7fa;
+        }
+
+        /* Header */
+        #header {
+            background-color: #8ff806;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        /* Navigation */
+        #nav {
+            background-color: #6897ee;
+            text-align: center;
+            padding: 12px;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        #nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Section */
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #e0fafa;
+            padding: 30px;
+        }
+
+        form {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        form h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Footer */
+        #footer {
+            background-color: #cfe5f3;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95em;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>Contact Us</h1>
+        <span>Your feedback matters!</span>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav">
+        <a href="#header">Home</a>
+        <a href="#contactForm">Contact Form</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#aboutus">About Us</a>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <!-- Contact Form -->
+        <div id="contactForm">
+            <form>
+                <h2>Contact Form</h2>
+                <label>Email:</label>
+                <input type="email" name="useremail" required><br><br>
+
+                <label>Preferred Contact Date:</label>
+                <input type="date" name="contactDate" required><br><br>
+
+                <label>Satisfaction Level (0–10):</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="satisfaction"><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Calculator -->
+        <div id="calculator">
+            <form oninput="sum.value = parseFloat(num1.value || 0) + parseFloat(num2.value || 0)">
+                <h2>Simple Calculator</h2><br><br>
+                <label>Enter first number:</label>
+                <input type="number" id="num1"><br><br>
+
+                <label>Enter second number:</label>
+                <input type="number" id="num2"><br><br>
+
+                <label>Sum:</label>
+                <output name="sum"></output>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <p>Contact us at: info@yahoo.com | Phone: +6012-3456789</p>
+        <p>&copy; 2025 YourWebsiteName. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
